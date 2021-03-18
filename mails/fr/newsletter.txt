@@ -1,0 +1,9 @@
+[{shop_url}] 
+
+Bonjour {firstname} {lastname}, 
+
+{message} 
+
+{shop_name} [{shop_url}] réalisé avec
+Marketing Media [http://www.marketingmedia.ca/] 
+

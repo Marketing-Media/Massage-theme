@@ -1,0 +1,22 @@
+@import "compass";
+@import "theme_variables";
+.header_user_info {
+	float: right;
+	
+
+	a {
+		color: $green-text-color;
+		font-weight: bold;
+		display: block;
+		padding: 8px 9px 11px 7px;
+		cursor: pointer;
+		line-height:18px;
+		@media (max-width: $screen-xs - 1) {
+			font-size: 12px;
+		}
+		&:hover, &.active {
+			background: $green-text-color;
+			color:$grey-background;
+		}
+	}
+}

@@ -1,0 +1,58 @@
+
+
+  {{giftcard_title}}
+  
+  
+  
+
+
+
+  #outlook a { padding: 0; }
+  .ReadMsgBody { width: 100%; }
+  .ExternalClass { width: 100%; }
+  .ExternalClass * { line-height:100%; }
+  body { margin: 0; padding: 0; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+  table, td { border-collapse:collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+  img { border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; }
+  p { display: block; margin: 13px 0; }
+
+
+
+  @media only screen and (max-width:480px) {
+    @-ms-viewport { width:320px; }
+    @viewport { width:320px; }
+  }
+
+
+
+
+
+
+    
+    
+
+        @import url(https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700);
+
+    
+  
+  @media only screen and (min-width:480px) {
+    .mj-column-per-100 { width:100%!important; }
+.mj-column-px-500 { width:500px!important; }
+  }
+
+
+
+
+  
+              
+                
+                  
+                
+              
+            Hello {{lastname}} {{firstname}},Thank you for buying the following gift card:{{giftcard_name}} Please note that it is not configured and sent yet.To do so, we invite you to go to your client account available on {{site_url}} and click on My
+Gift Cards tab. There you will be able to configure your gift card and download or send it to the
+person of your choice.For any questions you may have on our gift cards, do not hesitate to contact us.
+      See you soon on {{site_url}}!
+      {{shopName}}{{shop_addr1}}{{shop_addr2}}{{shop_zipcode}} {{shop_city}}{{shop_country}}{{shop_phone}}{{shop_fax}}
+
+
