@@ -132,9 +132,9 @@
 									<div class="col-xs-12 col-sm-7 hours">
 										<h3>{l s="Opening hours"}</h3>
 										<p>
-											<strong><!--{l s="Monday - Friday:"}-->{if $lang_iso=="fr"}Du lundi au jeudi:{else}Monday to Thursday:{/if}</strong> 7:30 am - 6:00 pm  <br>
-											<strong><!--{l s="Saturday:"}-->{if $lang_iso=="fr"}Vendredi:{else}Friday:{/if}</strong> 9:00 am - 6:00 pm  <br>
-											<strong><!--{l s="Sunday:"}-->{if $lang_iso=="fr"}Samedi:{else}Saturday:{/if}</strong> 10:00 am - 2:00 pm <br>
+											<strong><!--{l s="Monday - Friday:"}-->{if $lang_iso=="fr"}Lundi au vendredi{else}Monday to Friday:{/if}</strong> 9:00 am - 6:00 pm <br>
+											{* <strong><!--{l s="Saturday:"}-->{if $lang_iso=="fr"}Vendredi:{else}Friday:{/if}</strong> 9:00 am - 6:00 pm  <br> *}
+											<strong><!--{l s="Sunday:"}-->{if $lang_iso=="fr"}Samedi:{else}Saturday:{/if}</strong> 9:00 am - 5:00 pm <br>
 											<strong><!--{l s="Sunday:"}-->{if $lang_iso=="fr"}Dimanche:{else}Sunday:{/if}</strong> {l s="Closed"}
 										</p>
 									</div>
@@ -158,9 +158,9 @@
 									<div class="col-xs-12 col-sm-7 hours">
 										<h3>{l s="Opening hours"}</h3>
 										<p>
-											<strong><!--{l s="Monday - Friday:"}-->{if $lang_iso=="fr"}Du lundi au vendredi: {else}Monday to Friday:{/if}</strong> 9:30 am - 4:30 pm <br>
+											<strong><!--{l s="Monday - Friday:"}-->{if $lang_iso=="fr"}Du lundi au vendredi: {else}Monday to Friday:{/if}</strong> 10:00 am - 6:00 pm <br>
 											
-											<strong><!--{l s="Sunday:"}-->{if $lang_iso=="fr"}Samedi:{else}Saturday:{/if}</strong>  {l s="Closed"}<br>
+											<strong><!--{l s="Sunday:"}-->{if $lang_iso=="fr"}Samedi:{else}Saturday:{/if}</strong>  11:00 am - 3:00 pm<br>
 											<strong><!--{l s="Sunday:"}-->{if $lang_iso=="fr"}Dimanche:{else}Sunday:{/if}</strong> {l s="Closed"}
 										</p>
 									</div>
