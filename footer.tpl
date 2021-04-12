@@ -124,7 +124,7 @@
 												{l s="Laval, Québec, Canada"} <br>
 												H7G 2V1</a></p>
 												<div class="buttonss">
-										<a href="https://www.google.ca/maps/place/Massageboutik.com/@45.5632882,-73.7075398,14z/data=!4m5!3m4!1s0x0:0x4fcea7e2fd88376e!8m2!3d45.5696275!4d-73.6914465hl={$lang_iso}" target="_blank">{l s="View map"}</a> - 
+										<a href="https://www.google.ca/maps/place/Massageboutik.com/@45.5632882,-73.7075398,14z/data=!4m5!3m4!1s0x0:0x4fcea7e2fd88376e!8m2!3d45.5696275!4d-73.6914465?hl={$lang_iso}" target="_blank">{l s="View map"}</a> - 
 										<a href="https://www.google.ca/maps/uv?hl={$lang_iso}&pb=!1s0x4cc9221c4dc5febf:0x4fcea7e2fd88376e!2m16!2m2!1i80!2i80!3m1!2i20!16m10!1b1!2m2!1m1!1e1!2m2!1m1!1e3!2m2!1m1!1e4!3m1!7e115!4s/maps/place/Massage%2BBoutik%2B478%2Bboul.%2Bdes%2BLaurentides%2BLaval,%2BQu%25C3%25A9bec,%2BCanada%2BH7G%2B2V1/@45.5695466,-73.6913731,3a,75y,176.85h,90t/data%3D*213m4*211e1*213m2*211s9tAxlvykDVgAAAQvPAkUmA*212e0*214m2*213m1*211s0x0:0x4fcea7e2fd88376e!5sMassage+Boutik+478+boul.+des+Laurentides+Laval,+Qu%C3%A9bec,+Canada+H7G+2V1+-+Google+Search&imagekey=!1e2!2s9tAxlvykDVgAAAQvPAkUmA&sa=X&ved=0ahUKEwi64N7T_9fQAhWFLSYKHd5JA84QoB8ImAUwZA" target="_blank">{l s="Virtual tour"}</a>
 									</div>
 									</div>
