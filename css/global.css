@@ -9509,3 +9509,32 @@ FOOTER
 .amazzingblog.displayHome {
   display: none !important;
 }
+
+form#stripe-card-payment #cards-logos {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  align-items: center;
+  justify-items: center;
+  margin-bottom: 40px !important;
+}
+.stripe-card-cardholdername input, #stripe-card-number, #stripe-card-expiry, #stripe-card-cvc, #stripe-card-postalcode {
+  border: #CCCCCC solid 1px;
+  margin-bottom: 15px;
+  padding: 3px;
+  box-sizing: border-box;
+  font-size: 15px;
+  width: 100%;
+  background-color: #ffffff;
+  position: relative;
+  padding: 0 10px;
+  height: 40px;
+  display: flex;
+}
+#HOOK_PAYMENT {
+  max-width: 500px;
+  margin: auto;
+
+}
+#powered_by_stripe {
+  display: none;
+}
