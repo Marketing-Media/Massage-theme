@@ -416,11 +416,11 @@
 				<input type="password" class="is_required validate form-control" data-validate="isPasswd" name="passwd" id="passwd" />
 				<span class="form_info">{l s='(Five characters minimum)'}</span>
 			</div>
-			<div class="form-group">
+			{* <div class="form-group">
 			    <label for="loyalty">{l s='Loyalty membership number'}</label>
 			    <input id="loyalty" class="form-control" name="loyalty" type="text" value="{if isset($smarty.post.loyalty)}{$smarty.post.loyalty}{/if}" />
 			    
-			</div>
+			</div> *}
 			<!-- <div class="form-group">
 				<label>{l s='Date of Birth'}</label>
 				<div class="row">
