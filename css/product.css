@@ -1280,7 +1280,12 @@ div.selector span {
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-}
+  }
+  #usefull_link_block li, #usefull_link_block li:first-child {
+    float: none !important;
+    width: 100%;
+    margin-bottom: 10px;
+  }
 
 
 
