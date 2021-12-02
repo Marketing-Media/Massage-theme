@@ -9212,7 +9212,12 @@ div.star.star_hover:after {
 .BrandsT a, .description_box a {color: #6DBE46;}
 .BrandsT a:hover {color: #333;}
 /*Footer Category hack*/
-.category_footer .list .dynamized li:last-child > a{display: none}
+.category_footer .list .dynamized li:last-child > a{
+  /*display: none*/
+}
+.category_footer.toggle-footer > div > ul > li.last{
+  display: none;
+}
 /*mmcopy*/
 #mmcopy a:hover {color: #ccc;}
 
