@@ -9218,7 +9218,7 @@ div.star.star_hover:after {
 .category_footer.toggle-footer > div > ul > li.last{
   display: none;
 }
-.category_footer .list .dynamized li:last-child > a{display: none}
+.category_footer .list .dynamized li:last-child > a{/*display: none*/}
 /*mmcopy*/
 #mmcopy a:hover {color: #ccc;}
 
