@@ -9265,6 +9265,9 @@ div.star.star_hover:after {
 } 
 
 @media (max-width: 767px) {
+  body .sf-menu > li > ul > li:after{
+    right: 0;
+  }
   .SecCMS6 div i{
     margin: auto;
   }
