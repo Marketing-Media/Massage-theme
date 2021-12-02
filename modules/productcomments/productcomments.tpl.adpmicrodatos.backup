@@ -25,7 +25,7 @@
 <div id="idTab5">
 	{if (!$content_only && (($nbComments == 0 && $too_early == false && ($is_logged || $allow_guests)) || ($nbComments != 0)))}
 <div class="col-sm-12 row ">
-	<div id="product_comments_block_extra" class="no-print col-sm-5" {if $nbComments != 0}   {/if}>
+	<div id="product_comments_block_extra" class="no-print col-sm-5" {if $nbComments != 0} itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating"{/if}>
 		{if $nbComments != 0}
 			<div class="comments_note clearfix">
 				<span>{l s='Rating' mod='productcomments'}&nbsp;</span>
@@ -37,10 +37,10 @@
 							<div class="star star_on"></div>
 						{/if}
 					{/section}
-					<meta  content = "{$nbComments}" />
-					<meta  content = "0" />
-					<meta  content = "{if isset($ratings.avg)}{$ratings.avg|round:1|escape:'html':'UTF-8'}{else}{$averageTotal|round:1|escape:'html':'UTF-8'}{/if}" />
-					<meta  content = "5" />
+					<meta itemprop="reviewCount" content = "{$nbComments}" />
+					<meta itemprop="worstRating" content = "0" />
+					<meta itemprop="ratingValue" content = "{if isset($ratings.avg)}{$ratings.avg|round:1|escape:'html':'UTF-8'}{else}{$averageTotal|round:1|escape:'html':'UTF-8'}{/if}" />
+					<meta itemprop="bestRating" content = "5" />
 				</div>
 			</div> <!-- .comments_note -->
 		{/if}
@@ -64,10 +64,10 @@
 		{if $comments}
 			{foreach from=$comments item=comment}
 				{if $comment.content}
-				<div class="comment row"   >
+				<div class="comment row" itemprop="review" itemscope itemtype="http://schema.org/Review">
 					<div class="comment_author col-sm-2">
 						<span>{l s='Grade' mod='productcomments'}&nbsp;</span>
-						<div class="star_content clearfix"    >
+						<div class="star_content clearfix"  itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
 							{section name="i" start=0 loop=5 step=1}
 								{if $comment.grade le $smarty.section.i.index}
 									<div class="star"></div>
@@ -75,22 +75,22 @@
 									<div class="star star_on"></div>
 								{/if}
 							{/section}
-            				<meta  content = "0" />
-							<meta  content = "{$comment.grade|escape:'html':'UTF-8'}" />
-            				<meta  content = "5" />
+            				<meta itemprop="worstRating" content = "0" />
+							<meta itemprop="ratingValue" content = "{$comment.grade|escape:'html':'UTF-8'}" />
+            				<meta itemprop="bestRating" content = "5" />
 						</div>
 						<div class="comment_author_infos">
-							<strong >{$comment.customer_name|escape:'html':'UTF-8'}</strong>
-							<meta  content="{$comment.date_add|escape:'html':'UTF-8'|substr:0:10}" />
+							<strong itemprop="author">{$comment.customer_name|escape:'html':'UTF-8'}</strong>
+							<meta itemprop="datePublished" content="{$comment.date_add|escape:'html':'UTF-8'|substr:0:10}" />
 							<em>{dateFormat date=$comment.date_add|escape:'html':'UTF-8' full=0}</em>
 						</div>
 					</div> <!-- .comment_author -->
 
 					<div class="comment_details col-sm-10">
-						<p  class="title_block">
+						<p itemprop="name" class="title_block">
 							<strong>{$comment.title}</strong>
 						</p>
-						<p >{$comment.content|escape:'html':'UTF-8'|nl2br}</p>
+						<p itemprop="reviewBody">{$comment.content|escape:'html':'UTF-8'|nl2br}</p>
 						<ul>
 							{if $comment.total_advice > 0}
 								<li>

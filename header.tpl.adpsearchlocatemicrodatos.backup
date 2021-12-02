@@ -93,8 +93,58 @@
 </script>
 
 <!-- End Facebook Pixel Code -->
-
-
+<script type="application/ld+json">
+{
+	"@context": "https://schema.org",
+	"@type": "LocalBusiness",
+	"name": "Massageboutik | Laval, QC",
+	"image": "https://massageboutik.com/img/allezweb-logo-1480999397.jpg | Laval, QC",
+	"@id": "https://massageboutik.com/ | Laval, QC",
+	"url": "https://massageboutik.com/",
+	"telephone": "(450) 967-1970",
+	"email" : "info@massageboutik.com",
+	"priceRange": "-",
+	"address": {
+	  "@type": "PostalAddress",
+	  "streetAddress": "478 boul. des Laurentides",
+	  "addressLocality": "Laval, QC",
+	  "addressRegion": "QC",
+	  "postalCode": "H7G 2V1",
+	  "addressCountry": "CA"
+	} ,
+	"sameAs": [
+	"https://www.facebook.com/massageboutik",
+	"https://www.instagram.com/massageboutik/"
+  ] 
+	
+  }
+</script>
+<script type="application/ld+json">
+	  {
+		"@context": "https://schema.org",
+		"@type": "LocalBusiness",
+		"name": "Massageboutik | Montréal, QC",
+		"image": "https://massageboutik.com/img/allezweb-logo-1480999397.jpg | Montréal, QC",
+		"@id": "https://massageboutik.com/ | Montréal, QC",
+		"url": "https://massageboutik.com/",
+		"telephone": " 1-866-931-0920",
+		"email" : "info@massageboutik.com",
+		"priceRange": "-",
+		"address": {
+		  "@type": "PostalAddress",
+		  "streetAddress": "6696 avenue de Chateaubriand",
+		  "addressLocality": "Montréal, QC",
+		  "addressRegion": "QC",
+		  "postalCode": "H2S 2N7",
+		  "addressCountry": "CA"
+		} ,
+		"sameAs": [
+		"https://www.facebook.com/massageboutik",
+		"https://www.instagram.com/massageboutik/"
+	  ] 
+		
+	  }
+</script>
 
 {/literal}
 	</head>
@@ -119,7 +169,7 @@
 		<div id="page">
 			<div class="header-container">
 				<header id="header">
-					{*include file="$tpl_dir./covid-19.tpl"*} {*MM Just comment this line to quit banner. The style are inside tpl*}
+					{include file="$tpl_dir./covid-19.tpl"} {*MM Just comment this line to quit banner. The style are inside tpl*}
 					{capture name='displayBanner'}{hook h='displayBanner'}{/capture}
 					{if $smarty.capture.displayBanner}
 						<div class="banner">

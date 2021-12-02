@@ -1,7 +1,7 @@
 /* product desc */
 /* primary_block ***************************************************************************** */
 
-/* .addtocartbox {
+.addtocartbox {
   display: none;
 }
 .addcartTest{
@@ -16,7 +16,7 @@ display: none;
 #product #group_accessories {
   clear: both;
   margin: 15px 0;
-  padding: 10px 15px 0 27px !important; 
+  padding: 10px;
   background: #F6F6F6;
   color: #777;
 }
@@ -125,7 +125,7 @@ padding: 0;
   line-height: 53px;
   cursor: pointer;
 }
- */
+
 
 
 /* before to multiaccesories */
@@ -1410,15 +1410,7 @@ div.selector span {
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    }
-    #usefull_link_block li, #usefull_link_block li:first-child {
-      float: none !important;
-      width: 100%;
-      margin-bottom: 10px;
-    }
-    .socialsharing_product {
-      float: none !important;
-    }
+}
 
 
 

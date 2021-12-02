@@ -9212,7 +9212,13 @@ div.star.star_hover:after {
 .BrandsT a, .description_box a {color: #6DBE46;}
 .BrandsT a:hover {color: #333;}
 /*Footer Category hack*/
-.category_footer .list .dynamized li:last-child > a{display: none}
+.category_footer .list .dynamized li:last-child > a{
+  /*display: none*/
+}
+.category_footer.toggle-footer > div > ul > li.last{
+  display: none;
+}
+.category_footer .list .dynamized li:last-child > a{/*display: none*/}
 /*mmcopy*/
 #mmcopy a:hover {color: #ccc;}
 
@@ -9537,4 +9543,8 @@ form#stripe-card-payment #cards-logos {
 }
 #powered_by_stripe {
   display: none;
+}
+body #paypal_checkout_buttons_form {
+  text-align: center;
+  padding: 15px;
 }

@@ -35,8 +35,8 @@
 		{assign var='productPrice' value=$product->getPrice(false, $smarty.const.NULL, 6)}
 		{assign var='productPriceWithoutReduction' value=$product->getPriceWithoutReduct(true, $smarty.const.NULL)}
 	{/if}
-<div  >
-	<meta  content="{$link->getProductLink($product)}">
+<div itemscope itemtype="https://schema.org/Product">
+	<meta itemprop="url" content="{$link->getProductLink($product)}">
 
 	<div class="primary_block row">
 		{if !$content_only}
@@ -84,10 +84,10 @@
 					<span id="view_full_size">
 						{if $jqZoomEnabled && $have_image && !$content_only}
 							<a class="jqzoom" title="{if !empty($cover.legend)}{$cover.legend|escape:'html':'UTF-8'}{else}{$product->name|escape:'html':'UTF-8'}{/if}" rel="gal1" href="{$link->getImageLink($product->link_rewrite, $cover.id_image, 'thickbox_default')|escape:'html':'UTF-8'}">
-								<img  src="{$link->getImageLink($product->link_rewrite, $cover.id_image, 'large_default')|escape:'html':'UTF-8'}" title="{if !empty($cover.legend)}{$cover.legend|escape:'html':'UTF-8'}{else}{$product->name|escape:'html':'UTF-8'}{/if}" alt="{if !empty($cover.legend)}{$cover.legend|escape:'html':'UTF-8'}{else}{$product->name|escape:'html':'UTF-8'}{/if}"/>
+								<img itemprop="image" src="{$link->getImageLink($product->link_rewrite, $cover.id_image, 'large_default')|escape:'html':'UTF-8'}" title="{if !empty($cover.legend)}{$cover.legend|escape:'html':'UTF-8'}{else}{$product->name|escape:'html':'UTF-8'}{/if}" alt="{if !empty($cover.legend)}{$cover.legend|escape:'html':'UTF-8'}{else}{$product->name|escape:'html':'UTF-8'}{/if}"/>
 							</a>
 						{else}
-							<img id="bigpic"  src="{$link->getImageLink($product->link_rewrite, $cover.id_image, 'large_default')|escape:'html':'UTF-8'}" title="{if !empty($cover.legend)}{$cover.legend|escape:'html':'UTF-8'}{else}{$product->name|escape:'html':'UTF-8'}{/if}" alt="{if !empty($cover.legend)}{$cover.legend|escape:'html':'UTF-8'}{else}{$product->name|escape:'html':'UTF-8'}{/if}" width="{$largeSize.width}" height="{$largeSize.height}"/>
+							<img id="bigpic" itemprop="image" src="{$link->getImageLink($product->link_rewrite, $cover.id_image, 'large_default')|escape:'html':'UTF-8'}" title="{if !empty($cover.legend)}{$cover.legend|escape:'html':'UTF-8'}{else}{$product->name|escape:'html':'UTF-8'}{/if}" alt="{if !empty($cover.legend)}{$cover.legend|escape:'html':'UTF-8'}{else}{$product->name|escape:'html':'UTF-8'}{/if}" width="{$largeSize.width}" height="{$largeSize.height}"/>
 							{if !$content_only}
 								<span class="span_link no-print">{l s='Expand'}</span>
 							{/if}
@@ -95,7 +95,7 @@
 					</span>
 				{else}
 					<span id="view_full_size">
-						<img  src="{$img_prod_dir}{$lang_iso}-default-large_default.jpg" id="bigpic" alt="" title="{$product->name|escape:'html':'UTF-8'}" width="{$largeSize.width}" height="{$largeSize.height}"/>
+						<img itemprop="image" src="{$img_prod_dir}{$lang_iso}-default-large_default.jpg" id="bigpic" alt="" title="{$product->name|escape:'html':'UTF-8'}" width="{$largeSize.width}" height="{$largeSize.height}"/>
 						{if !$content_only}
 							<span class="span_link">
 								{l s='expand'}
@@ -126,7 +126,7 @@
 								{/if}
 								<li id="thumbnail_{$image.id_image}"{if $smarty.foreach.thumbnails.last} class="last"{/if}>
 									<a{if $jqZoomEnabled && $have_image && !$content_only} href="javascript:void(0);" rel="{literal}{{/literal}gallery: 'gal1', smallimage: '{$link->getImageLink($product->link_rewrite, $imageIds, 'large_default')|escape:'html':'UTF-8'}',largeimage: '{$link->getImageLink($product->link_rewrite, $imageIds, 'thickbox_default')|escape:'html':'UTF-8'}'{literal}}{/literal}"{else} href="{$link->getImageLink($product->link_rewrite, $imageIds, 'thickbox_default')|escape:'html':'UTF-8'}"	data-fancybox-group="other-views" class="fancybox{if $image.id_image == $cover.id_image} shown{/if}"{/if} title="{$imageTitle}">
-										<img class="img-responsive" id="thumb_{$image.id_image}" src="{$link->getImageLink($product->link_rewrite, $imageIds, 'cart_default')|escape:'html':'UTF-8'}" alt="{$imageTitle}" title="{$imageTitle}"{if isset($cartSize)} height="{$cartSize.height}" width="{$cartSize.width}"{/if}  />
+										<img class="img-responsive" id="thumb_{$image.id_image}" src="{$link->getImageLink($product->link_rewrite, $imageIds, 'cart_default')|escape:'html':'UTF-8'}" alt="{$imageTitle}" title="{$imageTitle}"{if isset($cartSize)} height="{$cartSize.height}" width="{$cartSize.width}"{/if} itemprop="image" />
 									</a>
 								</li>
 							{/foreach}
@@ -159,7 +159,7 @@
 			{if $product->online_only}
 				<p class="online_only">{l s='Online only'}</p>
 			{/if}
-			<h1 >{$product->name|escape:'html':'UTF-8'}</h1>
+			<h1 itemprop="name">{$product->name|escape:'html':'UTF-8'}</h1>
 
 			{assign var="manpic" value="img/m/{$product_manufacturer->id_manufacturer}.jpg"}
 
@@ -171,13 +171,13 @@
 				</div>
 				<p id="product_reference"{if empty($product->reference) || !$product->reference} style="display: none;"{/if}>
 					<label>{l s='Sku:'} </label> 
-					<span class="editable"  
+					<span class="editable" itemprop="sku" 
 					content="{$product->reference|escape:'html':'UTF-8'}">{$product->reference|escape:'html':'UTF-8'}</span>
 					{if !empty($product->reference) && $product->reference}
-						<meta  content="{$product->reference}" />  <!-- If not have mpn, use the reference val. -->
+						<meta itemprop="mpn" content="{$product->reference}" />  <!-- If not have mpn, use the reference val. -->
 					{/if}
-					<meta  content="{if $product->manufacturer_name}{$product->manufacturer_name}{else}Massageboutik{/if}" />
-					<meta  content="{$product->description|strip_tags}" />
+					<meta itemprop="brand" content="{if $product->manufacturer_name}{$product->manufacturer_name}{else}Massageboutik{/if}" />
+					<meta itemprop="description" content="{$product->description|strip_tags}" />
 
 
 				</p>
@@ -299,18 +299,18 @@
 						{if $product->show_price && !isset($restricted_country_mode) && !$PS_CATALOG_MODE}
 							<!-- prices -->
 							<div>
-								<p class="our_price_display"   >{strip}
-									<meta  content="{'Y'|date}-12-31" />
-									<meta  content="{$link->getProductLink($product)}">
+								<p class="our_price_display" itemprop="offers" itemscope itemtype="https://schema.org/Offer">{strip}
+									<meta itemprop="priceValidUntil" content="{'Y'|date}-12-31" />
+									<meta itemprop="url" content="{$link->getProductLink($product)}">
 
-									{*if $product->quantity > 0*}<link  href="https://schema.org/InStock"/>{*/if*}
+									{*if $product->quantity > 0*}<link itemprop="availability" href="https://schema.org/InStock"/>{*/if*}
 
 									{if $priceDisplay >= 0 && $priceDisplay <= 2}
-										<span id="our_price_display" class="price"  content="{$productPrice}">{convertPrice price=$productPrice|floatval}</span>
+										<span id="our_price_display" class="price" itemprop="price" content="{$productPrice}">{convertPrice price=$productPrice|floatval}</span>
 										{if $tax_enabled  && ((isset($display_tax_label) && $display_tax_label == 1) || !isset($display_tax_label))}
 											{if $priceDisplay == 1} {l s='tax excl.'}{else} {l s='tax incl.'}{/if}
 										{/if}
-										<meta  content="{$currency->iso_code}" />
+										<meta itemprop="priceCurrency" content="{$currency->iso_code}" />
 										{hook h="displayProductPriceBlock" product=$product type="price"}
 									{/if}
 								{/strip}</p>
@@ -863,7 +863,7 @@
                     {include file="{$tpl_dir}product-compare.tpl"}
                 </div>
             </div>
-</div> <!--  product wrapper -->
+</div> <!-- itemscope product wrapper -->
 {strip}
 {if isset($smarty.get.ad) && $smarty.get.ad}
 	{addJsDefL name=ad}{$base_dir|cat:$smarty.get.ad|escape:'html':'UTF-8'}{/addJsDefL}

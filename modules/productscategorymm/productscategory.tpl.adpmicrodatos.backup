@@ -47,7 +47,7 @@
 		{if $totModuloTablet == 0}{assign var='totModuloTablet' value=$nbItemsPerLineTablet}{/if}
 		{if $totModuloMobile == 0}{assign var='totModuloMobile' value=$nbItemsPerLineMobile}{/if}
 			<li class="ajax_block_product col-md-3 col-sm-4 col-xs-12 {if $smarty.foreach.categoryProduct.iteration%$nbItemsPerLine == 0} last-in-line{elseif $smarty.foreach.categoryProduct.iteration%$nbItemsPerLine == 1} {/if}{if $smarty.foreach.categoryProduct.iteration > ($smarty.foreach.categoryProduct.total - $totModulo)} last-line{/if}{if $smarty.foreach.categoryProduct.iteration%$nbItemsPerLineTablet == 0} last-item-of-tablet-line{elseif $smarty.foreach.categoryProduct.iteration%$nbItemsPerLineTablet == 1} first-item-of-tablet-line{/if}{if $smarty.foreach.categoryProduct.iteration%$nbItemsPerLineMobile == 0} last-item-of-mobile-line{elseif $smarty.foreach.categoryProduct.iteration%$nbItemsPerLineMobile == 1} first-item-of-mobile-line{/if}{if $smarty.foreach.categoryProduct.iteration > ($smarty.foreach.categoryProduct.total - $totModuloMobile)} last-mobile-line{/if}">
-				<div class="product-container"  >
+				<div class="product-container" itemscope itemtype="https://schema.org/Product">
 								<div class="left-block">
 									<div class="product-image-container">
 				<a href="{$link->getProductLink($categoryProduct.id_product, $categoryProduct.link_rewrite, $categoryProduct.category, $categoryProduct.ean13)}" class="lnk_img product-image " title="{$categoryProduct.name|htmlspecialchars}"><img class="img-responsive" src="{$link->getImageLink($categoryProduct.link_rewrite, $categoryProduct.id_image, 'home_default')|escape:'html':'UTF-8'}" alt="{$categoryProduct.name|htmlspecialchars}" /></a>
@@ -72,7 +72,7 @@
 					
 				</div>
 				<div class="right-block">
-				<h5  class="product-name">
+				<h5 itemprop="name" class="product-name">
 					<a href="{$link->getProductLink($categoryProduct.id_product, $categoryProduct.link_rewrite, $categoryProduct.category, $categoryProduct.ean13)|escape:'html':'UTF-8'}" title="{$categoryProduct.name|htmlspecialchars}">{$categoryProduct.name|escape:'html':'UTF-8'}</a>
 				</h5>
 				{if $ProdDisplayPrice && $categoryProduct.show_price == 1 && !isset($restricted_country_mode) && !$PS_CATALOG_MODE}

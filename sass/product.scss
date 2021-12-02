@@ -1273,3 +1273,31 @@ Quick View Styles
 
 	}
 }
+
+.addtocartbox.addcartTest {
+    display: none;
+}
+.addcartTest .exclusive{
+	padding: 0;
+    background: #6DBE46;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    position: relative;
+    display: block;
+    border: 0;
+    text-transform: uppercase;
+}
+.addcartTest .buttonText{
+	-webkit-border-radius: 5px;
+    border-radius: 5px;
+    font-weight: 400;
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+    line-height: 22px;
+    width: 211px;
+    height: 53px;
+    line-height: 53px;
+    color: #fff;
+    display: block !important;
+}

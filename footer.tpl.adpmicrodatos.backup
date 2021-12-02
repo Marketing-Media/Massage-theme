@@ -151,9 +151,9 @@
 										
 									</div>
 									</div>
-									 <div   >
-										<meta  content="45.5367597" />
-										<meta  content="-73.6071524" />
+									 <div itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates">
+										<meta itemprop="latitude" content="45.5367597" />
+										<meta itemprop="longitude" content="-73.6071524" />
 									  </div>
 									<div class="col-xs-12 col-sm-7 hours">
 										<h3>{l s="Opening hours"}</h3>
