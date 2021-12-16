@@ -8421,6 +8421,10 @@ div.star.star_hover:after {
   margin-bottom: 1em; 
   text-align: center; }
 
+
+.blockcategories_footer .list ul{
+  padding-left: 0;/*Fixing stuff*/
+}
 .blockcategories_footer .list > ul > li > ul {
   display: block !important; }
 .blockcategories_footer ul ul ul {
@@ -9512,9 +9516,7 @@ background: #579b36;
 /****************
 FOOTER
 ****************/
-div.category_footer ul{
-  padding-left: 0;/*Fixing stuff*/
-}
+
 #footer > section.blockcategories_footer > div.category_footer.toggle-footer > div > ul > li:nth-child(1) > a{
   display: none;/* Hide Shop By Category link (BnJ Req)*/
 }
