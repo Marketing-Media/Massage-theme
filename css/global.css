@@ -17973,8 +17973,8 @@ div.star.star_hover:after {
   text-align: center; }
 
 
-.blockcategories_footer .list ul{
-  padding-left: 0;/*Fixing stuff*/
+div.category_footer.toggle-footer > div ul {
+    padding-left: 0;/*Fixing padding*/
 }
 .blockcategories_footer .list > ul > li > ul {
   display: block !important; }
