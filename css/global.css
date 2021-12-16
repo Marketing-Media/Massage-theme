@@ -8422,9 +8422,6 @@ div.star.star_hover:after {
   text-align: center; }
 
 
-div.category_footer.toggle-footer > div ul {
-    padding-left: 0;/*Fixing padding*/
-}
 .blockcategories_footer .list > ul > li > ul {
   display: block !important; }
 .blockcategories_footer ul ul ul {
@@ -9555,4 +9552,8 @@ form#stripe-card-payment #cards-logos {
 body #paypal_checkout_buttons_form {
   text-align: center;
   padding: 15px;
+}
+
+div.category_footer.toggle-footer > div ul {
+  padding-left: 0;/*Fixing padding*/
 }
