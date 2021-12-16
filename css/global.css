@@ -17973,9 +17973,6 @@ div.star.star_hover:after {
   text-align: center; }
 
 
-div.category_footer.toggle-footer > div ul {
-    padding-left: 0;/*Fixing padding*/
-}
 .blockcategories_footer .list > ul > li > ul {
   display: block !important; }
 .blockcategories_footer ul ul ul {
@@ -19106,5 +19103,12 @@ form#stripe-card-payment #cards-logos {
 body #paypal_checkout_buttons_form {
   text-align: center;
   padding: 15px;
+<<<<<<< HEAD
 >>>>>>> 9ad9f2cd922e89c5251640f3b15f5712ebf924e3
+=======
+}
+
+div.category_footer.toggle-footer > div ul {
+  padding-left: 0;/*Fixing padding*/
+>>>>>>> 73eda4b5d98d0ae699b4465b8b14cadb4ca276bc
 }
