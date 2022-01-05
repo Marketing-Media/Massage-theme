@@ -58,6 +58,7 @@
 					{l s="Laval, Québec, Canada"} <br>
 					H7G 2V1</a></p>
 		</div>
+		{*
 		<div class="col-xs-12 hours">
 			<h3>{if $lang_iso == en}{l s="Opening hours"}{else}Heures d'ouverture{/if}</h3>
 			<p>
@@ -67,6 +68,7 @@
 										<strong><!--{l s="Sunday:"}-->{if $lang_iso=="fr"}Dimanche:{else}Sunday:{/if}</strong> {if $lang_iso=="fr"}Fermé{else}{l s="Closed"}{/if}
 			</p>
 		</div>
+		*}
 		<div class="col-xs-12 Tel">
 			<h3>{if $lang_iso == en}{l s="Phone"}{else}Téléphone{/if}</h3>
 			<p>
