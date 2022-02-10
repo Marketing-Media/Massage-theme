@@ -609,6 +609,8 @@
 					</div>
 				</section>
 			{/if}
+			<div class="upc" style="display: none;">{$product->upc}</div>
+			<div class="ean13" style="display: none;">{$product->ean13}</div>
 			{if isset($product) && $product->description}
 				<!-- More info -->
 				<section class="page-product-box">
