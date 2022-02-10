@@ -614,6 +614,7 @@
 				<section class="page-product-box">
 					<h3 class="page-product-heading strong">{if $lang_iso == en}{l s='More information'}{else}EN SAVOIR PLUS{/if}</h3>
 					<!-- full description -->
+					<div class="short-description" style="display: none">{$product->description_short}</div>
 					<div  class="rte">{$product->description}</div>
 				</section>
 				<!--end  More info -->
