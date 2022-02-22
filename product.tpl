@@ -169,7 +169,7 @@
 						{if file_exists($manpic)}
 						<a href="{$link->getManufacturerLink($product->id_manufacturer)}"><img src="{$content_dir}img/m/{$product_manufacturer->id_manufacturer}-medium_default.jpg" /></a>{/if}
 					</div>
-					<p style="display: none;">{$product->id}</p>
+					<p class="productId" style="display: none;">{$product->id}</p>
 					<p id="product_reference"{if empty($product->reference) || !$product->reference} style="display: none;"{/if}>
 						<label>{l s='Sku:'} </label> 
 						<span class="editable"  
